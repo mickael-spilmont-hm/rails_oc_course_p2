@@ -1,0 +1,14 @@
+<% if @current_user %>
+  
+  <% if @current_user.role == "admin" %>
+    <h1>Welcome Administrateur<%= @current_user.name %> !</h1>
+    <a href="/users/index">Show users list</a>
+    <a href="/users/logout">Log-out</a>
+  <% else %>
+    <h1>Welcome<%= @current_user.name %> !</h1>
+  <% end %>
+
+<% else %>
+  <h1>Welcome invited</h1>
+  <a href="/users/login">Log-in</a>
+<% end %>
