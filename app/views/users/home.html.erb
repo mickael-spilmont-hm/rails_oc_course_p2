@@ -1,2 +1,7 @@
-<h1>Welcome !!!</h1>
-<a href="/user/login">Log-in</a>
+<% if @current_user %>
+  <h1>Welcome <%= @current_user.name %> !</h1>
+  <a href="/users/logout">Log-out</a>
+<% else %>
+  <h1>Welcome invited</h1>
+  <a href="/users/login">Log-in</a>
+<% end %>
