@@ -1,0 +1,6 @@
+<h1>List of users</h1>
+<% @users.each do |user| %>
+  <%= "Id : #{user.id} Name : #{user.name} Role : #{user.role}" %>
+<% end %>
+<br>
+<a href="/users/home">Go to home</a>
