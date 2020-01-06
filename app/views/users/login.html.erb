@@ -1,0 +1,7 @@
+<h1>Login</h1>
+<a href="/users/home">Go to home</a>
+<%= form_tag "/users/login", method: :post do %>
+  <input type="text" name="name" />
+  <input type=password" name="password" />
+  <input type="submit" value="login">
+<% end %>
